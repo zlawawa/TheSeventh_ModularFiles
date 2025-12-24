@@ -19,18 +19,17 @@ void Iteration(int Array[], int N, int Position) {
         f2 << Array[i] << " ";
     }
     std::cout << "\n";
-    f2 << "\n"; //
+    f2 << "\n"; 
     f2.close();
 }
-
 void Sort_Vybor(int *Array, int N) {
     ofstream ClearFile("LBWork7Answers.txt", ios::trunc);
     ClearFile.close();
     
     int K, M, It = 1;
-    for (int i = N - 1; i > 0; i--) {
+    for (int i = N - 1; i > 0; i--) { //с конца к началу идем
         K = i; M = Array[i];
-        for (int j = 0; j < i; j++) {
+        for (int j = 0; j < i; j++) { // цикл j ищет макс эл и сортирует
             if (Array[j] > M) {
                 K = j; M = Array[K];
             }
@@ -86,7 +85,7 @@ void ExamTaskC14() {
     std::cin >> Code;
     if (Code < 10 || Code > 99) { std::cout << "Некорректно введены данные!\n"; std::cout << "========= Конец задачи =========\n\n";  return; }
     else { 
-        int MaxQuantityData = 1000, CntRecord = 0;
+        int MaxQuantityData = 1000, CntRecord = 0;  //cntrecords - сохраняет кол-во записей найденных по коду
         Clients Data[MaxQuantityData];
         std::cout << "Введите данные клиентов в формате: Год (2000-2010)/Месяц (1-12)/Код_клиента (10-99)/Продолжительность (1-30).\n";
         for (int i = 0; i < N; i++) {
