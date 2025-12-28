@@ -1,5 +1,4 @@
 #include <vector>
-using namespace std;
 
 void Iteration(int Array[], int N, int Position);
 void Sort_Vybor(int *Array, int N);
@@ -19,4 +18,5 @@ struct Students {
     int Point;
 };
 void QSort(std::vector<Students>& Array, int L, int R);
+
 void TaskFive11();
