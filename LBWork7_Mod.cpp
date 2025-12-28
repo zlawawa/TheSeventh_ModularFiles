@@ -4,10 +4,8 @@
 #include <vector>
 #include <iomanip>
 
-using namespace std;
-
 void Iteration(int Array[], int N, int Position) {
-    ofstream f2("LBWork7Answers.txt", ios::app);
+    std::ofstream f2("LBWork7Answers.txt", std::ios::app);
     for (int i = 0; i < Position; i++) {
         std::cout << Array[i] << " ";
         f2 << Array[i] << " ";
@@ -23,7 +21,7 @@ void Iteration(int Array[], int N, int Position) {
     f2.close();
 }
 void Sort_Vybor(int *Array, int N) {
-    ofstream ClearFile("LBWork7Answers.txt", ios::trunc);
+    std::ofstream ClearFile("LBWork7Answers.txt", std::ios::trunc);
     ClearFile.close();
     
     int K, M, It = 1;
@@ -40,7 +38,7 @@ void Sort_Vybor(int *Array, int N) {
         }
         std::cout << "Итерация #" << It << ": ";
 
-        ofstream f2("LBWork7Answers.txt", ios::app);
+        std::ofstream f2("LBWork7Answers.txt", std::ios::app);
         f2 << "Итерация #" << It << ": ";
         f2.close();
 
@@ -153,8 +151,8 @@ void QSort(std::vector<Students>& Array, int L, int R) {
     if (R > i) { QSort(Array, i, R); }
 }
 void TaskFive11() {
-    ifstream f1("LBWork7.txt", ios::in);
-    ofstream f2("LBWork7Answers.txt", ios::out);
+    std::ifstream f1("LBWork7.txt", std::ios::in);
+    std::ofstream f2("LBWork7Answers.txt", std::ios::out);
     if (!f1.is_open()) { std::cerr << "Error!\n"; return; }
     
     std::vector<Students> Student;
@@ -174,3 +172,4 @@ void TaskFive11() {
     f2.close();
     std::cout << "\n===== 3. Задача №3 - Five11 =====\nРезультаты задачи записаны в файл 'LBWork7Answers.txt'.\n========= Конец задачи =========\n\n";
 }
+
